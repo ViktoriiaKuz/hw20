@@ -11,8 +11,9 @@ public class StreamAPI {
 
     public static void filterNumbers() {
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
-        list.stream().map((x) -> x * x)
+        list.stream()
                 .filter((n) -> n % 2 != 1)
+                .map((x) -> x * x)
                 .forEach(System.out::println);
     }
 }
